@@ -47,10 +47,11 @@ public class Principal3 {
                                 arr[j] = tamanio - j;
                             }
                             if (tamanio == 1) {
-                                System.out.println("arreglo de " + tamanio + " posición creado.");
+                                System.out.println("arreglo de " + tamanio + " posición creado " + "[ " + mostrarArray(tamanio, arr) + "]");
                             } else {
-                                System.out.println("arreglo de " + tamanio + " posiciones creadas.");
+                                System.out.println("arreglo de " + tamanio + " posiciones creadas " + "[ " + mostrarArray(tamanio, arr) + "]");
                             }
+
                         }
                         break;
                     case 3:
@@ -66,6 +67,14 @@ public class Principal3 {
                 System.out.println("Tamaño para dimensionar arreglo inválido");
             }
         }
+    }
+
+    private static String mostrarArray(int tamanio, int[] arr) {
+        StringBuilder arreglo = new StringBuilder();
+        for (int j = tamanio / 2; j < tamanio; j++) {
+            arreglo.append(arr[j]).append(" ");
+        }
+        return arreglo.toString();
     }
 
 
